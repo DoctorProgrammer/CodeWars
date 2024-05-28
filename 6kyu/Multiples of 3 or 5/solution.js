@@ -1,16 +1,9 @@
-function solution(number){
-    return number
+function solution(number) {
+    let sum = 0;
+    for (let i = 1; i < number; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            sum += i;
+        }
+    }
+    return sum;
 }
-
-const assert = require('assert')
-
-function test(n, expected) {
-  it(`n=${n}`, () => {  
-    let actual = solution(n)
-    assert.strictEqual(actual, expected)
-  })
-}
-
-describe("basic tests", function(){
-  test(10,23)
-})
